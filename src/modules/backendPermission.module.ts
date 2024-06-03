@@ -2,7 +2,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BackendPermissionController } from '@app/controllers/backendPermission.controller'
-import { BackendPermissionService } from '@app/services/BackendPermission.service'
+import { BackendPermissionService } from '@app/services/backendPermission.service'
 import { BackendPermission, BackendPermissionSchema } from '@app/schemas/backendPermission.schema';
 import { BackendPermissionRepository } from '@app/repositories/backendPermission.repository';
 

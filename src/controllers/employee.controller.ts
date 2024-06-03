@@ -21,8 +21,8 @@ export class EmployeeController {
     @Req() req: Request,
     @Res() res: Response
   ): Promise<Response> {
-    const { body } = req;
-    const createdEmp = await this.service.createEmployee(body)
+    const { body, ip } = req;
+    const createdEmp = await this.service.createEmployee(body, ip)
     if (createdEmp) {
       return res.status(200).send("Employee Created")
     }

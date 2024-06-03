@@ -11,13 +11,14 @@ export class BackendPermissionService {
         return this.backendPermission.findAll();
     }
 
-    async createBackendPermission(BackendPermissionDetails): Promise<Record<string, any>> {
+    async createBackendPermission(backendPermissionDetails, ipAddress: string): Promise<Record<string, any>> {
         const payload = {
             createdAt: new Date(),
             createdBy: 'system',
             updatedAt: new Date(),
             updatedBy: 'system',
-            ...BackendPermissionDetails
+            ipAddress: ipAddress,
+            ...backendPermissionDetails
         }
         return this.backendPermission.create(payload);
     }

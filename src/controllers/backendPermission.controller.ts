@@ -21,8 +21,8 @@ export class BackendPermissionController {
     @Req() req: Request,
     @Res() res: Response
   ): Promise<Response> {
-    const { body } = req;
-    const createdBackendPermission = await this.service.createBackendPermission(body)
+    const { body, ip } = req;
+    const createdBackendPermission = await this.service.createBackendPermission(body, ip)
     if (createdBackendPermission) {
       return res.status(200).send("BackendPermission Created")
     }

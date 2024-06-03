@@ -1,6 +1,6 @@
 import { EmployeeService } from "@app/services/employee.service";
 import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request,Response } from "express";
+import { Request, Response } from "express";
 
 @Controller('employees')
 export class EmployeeController {
@@ -18,13 +18,13 @@ export class EmployeeController {
 
   @Post('/')
   async create(
-    @Req() req :Request,
-    @Res() res:Response
-    ): Promise<Response>{
-      const {body}=req;
-      const createdEmp = await this.service.createEmployee(body)
-      if(createdEmp){
-        return res.status(200).send("Employee Created")
-      }
+    @Req() req: Request,
+    @Res() res: Response
+  ): Promise<Response> {
+    const { body } = req;
+    const createdEmp = await this.service.createEmployee(body)
+    if (createdEmp) {
+      return res.status(200).send("Employee Created")
     }
   }
+}

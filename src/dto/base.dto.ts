@@ -1,4 +1,7 @@
 export class BaseDTO {
-    createdAt:Date;
+    createdOn: Date;
     createdBy: string;
+    updatedBy: string;
+    updatedOn: Date;
+    ipAddress: string;
 }

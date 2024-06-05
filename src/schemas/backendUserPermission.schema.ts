@@ -1,15 +1,16 @@
 import { Schema,Prop, SchemaFactory } from "@nestjs/mongoose";
 import { BaseSchema } from "./base.schema";
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 
 export type BackenduserPermissionSchemaDocument =  HydratedDocument<BackendUserPermission>;
 
 @Schema()
 export class BackendUserPermission extends BaseSchema {
-    @Prop({require:true})
-    BackEndPermissionId:Number
-    @Prop({require:true})
-    BackEndUserId:Number
+    @Prop({ type: Types.ObjectId, ref: 'BackendPermission', required: true })
+    backendPermissionId: Types.ObjectId;
+
+    @Prop({ type: Types.ObjectId, ref: 'BackendUser', required: true })
+    backendUserId: Types.ObjectId;
 
 }
 

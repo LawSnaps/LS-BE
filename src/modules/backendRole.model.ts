@@ -1,6 +1,3 @@
-BackendRole
-
-
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BackendRoleController } from '@app/controllers/backendRole.controller'

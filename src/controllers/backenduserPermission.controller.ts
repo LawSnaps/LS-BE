@@ -1,6 +1,7 @@
-import { BackendUserPermissionService } from "@app/services/backendUserpermission.service";
+import { BackendUserPermissionModel } from "@app/models";
+import { BackendUserPermissionService } from "@app/services/backendUserPermission.service";
 import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request,Response } from "express";
+import { Request, Response } from "express";
 
 @Controller('backenduserPermission')
 export class BackendUserPermissionController {
@@ -12,19 +13,20 @@ export class BackendUserPermissionController {
     @Req() req: Request,
     @Res() res: Response,
   ): Promise<Response> {
-    const user = await this.service.getAllEmployee();
+    const user = await this.service.getAllBackendUserPermission();
     return res.status(200).send(user);
   }
 
   @Post('/')
   async create(
-    @Req() req :Request,
-    @Res() res:Response
-    ): Promise<Response>{
-      const {body}=req;
-      const createdEmp = await this.service.createEmployee(body)
-      if(createdEmp){
-        return res.status(200).send("Employee Created")
-      }
+    @Req() req: Request,
+    @Res() res: Response
+  ): Promise<Response> {
+    const { body } = req;
+
+    const createdEmp = await this.service.createBackendUserPermission(body)
+    if (createdEmp) {
+      return res.status(200).send("BackendUserPermission Created")
     }
   }
+}

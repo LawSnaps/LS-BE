@@ -12,8 +12,8 @@ export class BackendRolePermissionController {
     @Req() req: Request,
     @Res() res: Response,
   ): Promise<Response> {
-    const user = await this.service.getAllEmployee();
-    return res.status(200).send(user);
+    const rolePermission = await this.service.getAllBackendRolePermission();
+    return res.status(200).send(rolePermission);
   }
 
   @Post('/')
@@ -22,9 +22,9 @@ export class BackendRolePermissionController {
     @Res() res:Response
     ): Promise<Response>{
       const {body}=req;
-      const createdEmp = await this.service.createEmployee(body)
-      if(createdEmp){
-        return res.status(200).send("Employee Created")
+      const createRolePermission = await this.service.createBackendRolePermission(body)
+      if(createRolePermission){
+        return res.status(200).send("Backend Role Permission created")
       }
     }
   }

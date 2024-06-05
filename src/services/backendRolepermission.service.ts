@@ -7,11 +7,11 @@ export class BackendRolePermissionService {
     @Inject('backedRolePermissionModule') private backendrolePermission,
   ){}
 
- async getAllEmployee() : Promise<Record<string,any>> {
+ async getAllBackendRolePermission() : Promise<Record<string,any>> {
     return this.backendrolePermission.findAll();
  }
 
- async createEmployee(backendrolePermissionDetails) : Promise<Record<string,any>>{
+ async createBackendRolePermission(backendrolePermissionDetails) : Promise<Record<string,any>>{
    const payload ={
       createdAt:new Date(),
       createdBy: 'system',

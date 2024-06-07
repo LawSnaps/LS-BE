@@ -1,4 +1,3 @@
-import { CreatBackendUserPermissionDto } from "@app/dto/backendUserPermission.dto";
 import { BackendUserPermission, BackenduserPermissionSchemaDocument } from "@app/schemas/backendUserPermission.schema";
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from "@nestjs/mongoose";

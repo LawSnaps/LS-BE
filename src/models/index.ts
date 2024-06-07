@@ -4,6 +4,7 @@ import { BackendPermissionModel } from "./backendPermission.model";
 import { BackendUserModel } from "./backendUser.model";
 import { BackendUserPermissionModel } from "./backendUserPermission.model";
 import { BackendUserRoleModel } from "./backendUserRole.model";
+import { MasterRoleModel } from "./masterRole.model";
 
 export {
     EmployeeModel,
@@ -11,5 +12,6 @@ export {
     BackendPermissionModel,
     BackendUserModel,
     BackendUserPermissionModel,
-    BackendUserRoleModel
+    BackendUserRoleModel,
+    MasterRoleModel
 }

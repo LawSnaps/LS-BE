@@ -1,16 +1,16 @@
 import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
 import { BaseSchema } from "./base.schema";
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 
 
 export type BackendUserRoleSchemaDocument = HydratedDocument<BackendUserRole>;
 
 @Schema()
 export class BackendUserRole extends BaseSchema {
-  @Prop({ required: true, type: Number })
+  @Prop({ type: Types.ObjectId, ref: 'BackendRole', required: true })
   backendRoleId: number;
 
-  @Prop({ required: true, type: Number })
+  @Prop({ type: Types.ObjectId, ref: 'BackendUser', required: true })
   backendUserId: number;
 }
 

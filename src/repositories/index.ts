@@ -4,6 +4,7 @@ import { BackendUserPermissionRepository } from "@app/repositories/backendUserPe
 import { BackendRoleRepository } from "@app/repositories/backendRole.repository";
 import { BackendUserRoleRepository } from "@app/repositories/backendUserRole.repository";
 import { EmployeeRepository } from "@app/repositories/employee.repository";
+import { MasterRoleRepository } from "./masterRole.repository";
 
 export {
     BackendUserRepository,
@@ -11,5 +12,6 @@ export {
     BackendRoleRepository,
     BackendUserPermissionRepository,
     BackendUserRoleRepository,
-    EmployeeRepository
+    EmployeeRepository,
+    MasterRoleRepository
 }

@@ -8,6 +8,7 @@ import { BackendUserModule } from './backendUser.module';
 import { BackendUserPermissionModule } from './backendUserPermission.module';
 
 import { BackendUserRoleModule } from './backendUserRole.module';
+import { MasterRoleModule } from './masterRole.module';
 
 export {
     EmployeeModule,
@@ -16,4 +17,5 @@ export {
     BackendUserModule,
     BackendUserPermissionModule,
     BackendUserRoleModule,
+    MasterRoleModule
 }

@@ -9,6 +9,7 @@ import { BackendUserPermissionModule } from './backendUserPermission.module';
 
 import { BackendUserRoleModule } from './backendUserRole.module';
 import { MasterRoleModule } from './masterRole.module';
+import { InvoiceModule } from './invoice.module';
 
 export {
     EmployeeModule,
@@ -17,5 +18,6 @@ export {
     BackendUserModule,
     BackendUserPermissionModule,
     BackendUserRoleModule,
-    MasterRoleModule
+    MasterRoleModule,
+    InvoiceModule
 }

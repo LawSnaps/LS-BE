@@ -7,6 +7,7 @@ import { BackendUserRoleModel } from "./backendUserRole.model";
 import { MasterRoleModel } from "./masterRole.model";
 import { InvoiceModel } from "./invoice.model";
 import { InvoiceItemModel } from "./invoiceItem.model";
+import { InvoiceTransactionModel } from "./invoiceTransaction.model";
 
 export {
     EmployeeModel,
@@ -17,5 +18,6 @@ export {
     BackendUserRoleModel,
     MasterRoleModel,
     InvoiceModel,
-    InvoiceItemModel
+    InvoiceItemModel,
+    InvoiceTransactionModel
 }

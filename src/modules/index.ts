@@ -10,6 +10,7 @@ import { BackendUserRoleModule } from './backendUserRole.module';
 import { MasterRoleModule } from './masterRole.module';
 import { InvoiceModule } from './invoice.module';
 import { InvoiceItemModule } from './invoiceItem.module';
+import { InvoiceTransactionModule } from './invoiceTransaction.module';
 
 export {
     EmployeeModule,
@@ -20,5 +21,6 @@ export {
     BackendUserRoleModule,
     MasterRoleModule,
     InvoiceModule,
-    InvoiceItemModule
+    InvoiceItemModule,
+    InvoiceTransactionModule
 }

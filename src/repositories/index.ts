@@ -6,6 +6,8 @@ import { BackendUserRoleRepository } from "@app/repositories/backendUserRole.rep
 import { EmployeeRepository } from "@app/repositories/employee.repository";
 import { MasterRoleRepository } from "./masterRole.repository";
 import { InvoiceRepository } from "./invoice.repository";
+import { InvoiceItemRepository } from "./invoiceItem.repository";
+import { InvoiceTransactionRepository } from "./invoiceTransaction.repository";
 
 export {
     BackendUserRepository,
@@ -15,5 +17,7 @@ export {
     BackendUserRoleRepository,
     EmployeeRepository,
     MasterRoleRepository,
-    InvoiceRepository
+    InvoiceRepository,
+    InvoiceItemRepository,
+    InvoiceTransactionRepository
 }

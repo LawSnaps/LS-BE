@@ -6,7 +6,7 @@ export type InvoiceItemSchemaDocument =  HydratedDocument<InvoiceItem>;
 
 @Schema()
 export class InvoiceItem extends BaseSchema {
-    @Prop({ required: true, type: String, maxlength: 50 })
+  @Prop({ required: true, type: String, maxlength: 50 })
   name: string;
 
   @Prop({ type: String })

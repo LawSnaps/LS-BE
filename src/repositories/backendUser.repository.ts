@@ -1,4 +1,3 @@
-import { CreateBackendUserDto } from '@app/dto/backendUser.dto';
 import {
   BackendUser,
   BackendUserSchemaDocument,

@@ -17,7 +17,7 @@ export class InvoiceItemController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdInvoiceItem = await this.service.createInvoiceItem(body);
     if (createdInvoiceItem) {
       return res.status(200).send('InvoiceItem Created');

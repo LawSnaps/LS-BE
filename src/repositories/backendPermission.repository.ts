@@ -1,4 +1,3 @@
-import { CreateBackendPermissionDto } from '@app/dto/backendPermission.dto';
 import {
   BackendPermission,
   BackendPermissionSchemaDocument,

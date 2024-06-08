@@ -17,7 +17,7 @@ export class InvoiceTransactionController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdInvoiceTransaction =
       await this.service.createInvoiceTransaction(body);
     if (createdInvoiceTransaction) {

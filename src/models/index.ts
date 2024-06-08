@@ -4,6 +4,12 @@ import { BackendPermissionModel } from "./backendPermission.model";
 import { BackendUserModel } from "./backendUser.model";
 import { BackendUserPermissionModel } from "./backendUserPermission.model";
 import { BackendUserRoleModel } from "./backendUserRole.model";
+import { MasterRoleModel } from "./masterRole.model";
+import { InvoiceModel } from "./invoice.model";
+import { InvoiceItemModel } from "./invoiceItem.model";
+import { InvoiceTransactionModel } from "./invoiceTransaction.model";
+import { SubscriptionModel } from "./subscription.model";
+import { PermissionModel } from "./permission.model";
 
 export {
     EmployeeModel,
@@ -11,5 +17,11 @@ export {
     BackendPermissionModel,
     BackendUserModel,
     BackendUserPermissionModel,
-    BackendUserRoleModel
+    BackendUserRoleModel,
+    MasterRoleModel,
+    InvoiceModel,
+    InvoiceItemModel,
+    InvoiceTransactionModel,
+    SubscriptionModel,
+    PermissionModel
 }

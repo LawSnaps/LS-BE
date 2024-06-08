@@ -1,8 +1,9 @@
-import { Schema,Prop, SchemaFactory } from "@nestjs/mongoose";
-import { BaseSchema } from "./base.schema";
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { BaseSchema } from './base.schema';
 import { HydratedDocument, Types } from 'mongoose';
 
-export type InvoiceTransactionSchemaDocument =  HydratedDocument<InvoiceTransaction>;
+export type InvoiceTransactionSchemaDocument =
+  HydratedDocument<InvoiceTransaction>;
 
 @Schema()
 export class InvoiceTransaction extends BaseSchema {
@@ -49,4 +50,5 @@ export class InvoiceTransaction extends BaseSchema {
   notes?: string;
 }
 
-export const InvoiceTransactionSchema = SchemaFactory.createForClass(InvoiceTransaction);
+export const InvoiceTransactionSchema =
+  SchemaFactory.createForClass(InvoiceTransaction);

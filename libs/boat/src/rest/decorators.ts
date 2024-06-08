@@ -5,7 +5,6 @@ export function WithAlias(name: string) {
   return function (
     target: Record<string, any>,
     propertyKey: string,
-    descriptor: PropertyDescriptor,
   ) {
     Reflect.defineMetadata(ROUTE_NAME, name, target, propertyKey);
   };

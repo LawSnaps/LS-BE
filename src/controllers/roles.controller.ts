@@ -1,11 +1,10 @@
-import { RolesService } from "@app/services/roles.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { RolesService } from '@app/services/roles.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('roles')
 export class RolesController {
-  constructor(private service: RolesService) {
-  }
+  constructor(private service: RolesService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,11 @@ export class RolesController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body, ip } = req;
-    const createdRoles = await this.service.createRoles(body, ip)
+    const createdRoles = await this.service.createRoles(body, ip);
     if (createdRoles) {
-      return res.status(200).send("Roles Created")
+      return res.status(200).send('Roles Created');
     }
   }
 }

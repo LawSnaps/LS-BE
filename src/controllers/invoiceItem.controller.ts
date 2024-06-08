@@ -1,11 +1,10 @@
-import { InvoiceItemService } from "@app/services/invoiceItem.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { InvoiceItemService } from '@app/services/invoiceItem.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('invoiceItem')
 export class InvoiceItemController {
-  constructor(private service: InvoiceItemService) {
-  }
+  constructor(private service: InvoiceItemService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,11 @@ export class InvoiceItemController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body, ip } = req;
-    const createdInvoiceItem = await this.service.createInvoiceItem(body)
+    const createdInvoiceItem = await this.service.createInvoiceItem(body);
     if (createdInvoiceItem) {
-      return res.status(200).send("InvoiceItem Created")
+      return res.status(200).send('InvoiceItem Created');
     }
   }
 }

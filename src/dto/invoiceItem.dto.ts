@@ -1,5 +1,5 @@
-import { Types } from "mongoose";
-import { BaseDTO } from "./base.dto";
+import { Types } from 'mongoose';
+import { BaseDTO } from './base.dto';
 
 export class CreateInvoiceItemDto extends BaseDTO {
   name: string;

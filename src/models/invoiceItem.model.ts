@@ -1,3 +1,3 @@
 export class InvoiceItemModel {
-    static collectionName = "invoiceItem"
+  static collectionName = 'invoiceItem';
 }

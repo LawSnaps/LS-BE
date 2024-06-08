@@ -1,11 +1,10 @@
-import { BackendUserRoleService } from "@app/services/backendUserRole.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { BackendUserRoleService } from '@app/services/backendUserRole.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('backendPermissions')
 export class BackendUserRoleController {
-  constructor(private service: BackendUserRoleService) {
-  }
+  constructor(private service: BackendUserRoleService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,12 @@ export class BackendUserRoleController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body } = req;
-    const createdBackendUserRole = await this.service.createBackendUserRole(body)
+    const createdBackendUserRole =
+      await this.service.createBackendUserRole(body);
     if (createdBackendUserRole) {
-      return res.status(200).send("BackendUserRole Created")
+      return res.status(200).send('BackendUserRole Created');
     }
   }
 }

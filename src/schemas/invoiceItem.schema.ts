@@ -1,8 +1,8 @@
-import { Schema,Prop, SchemaFactory } from "@nestjs/mongoose";
-import { BaseSchema } from "./base.schema";
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { BaseSchema } from './base.schema';
 import { HydratedDocument, Types } from 'mongoose';
 
-export type InvoiceItemSchemaDocument =  HydratedDocument<InvoiceItem>;
+export type InvoiceItemSchemaDocument = HydratedDocument<InvoiceItem>;
 
 @Schema()
 export class InvoiceItem extends BaseSchema {
@@ -30,7 +30,7 @@ export class InvoiceItem extends BaseSchema {
   @Prop({ type: Types.ObjectId, ref: 'ServicePlan', required: true })
   servicePlanId?: Types.ObjectId;
 
-  @Prop(({ type: Types.ObjectId, ref: 'Subscription', required: true }))
+  @Prop({ type: Types.ObjectId, ref: 'Subscription', required: true })
   subscriptionId?: Types.ObjectId;
 }
 

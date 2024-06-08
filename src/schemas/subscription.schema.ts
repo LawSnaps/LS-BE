@@ -1,8 +1,8 @@
-import { Schema,Prop, SchemaFactory } from "@nestjs/mongoose";
-import { BaseSchema } from "./base.schema";
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { BaseSchema } from './base.schema';
 import { HydratedDocument, Types } from 'mongoose';
 
-export type SubscriptionSchemaDocument =  HydratedDocument<Subscription>;
+export type SubscriptionSchemaDocument = HydratedDocument<Subscription>;
 
 @Schema()
 export class Subscription extends BaseSchema {

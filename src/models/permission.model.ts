@@ -1,3 +1,3 @@
 export class PermissionModel {
-    static collectionName = "permission"
+  static collectionName = 'permission';
 }

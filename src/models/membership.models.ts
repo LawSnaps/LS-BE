@@ -1,5 +1,3 @@
-
-
 export class MembershipModel {
-    static collectionName = "membership"
+  static collectionName = 'membership';
 }

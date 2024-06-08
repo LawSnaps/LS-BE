@@ -8,6 +8,7 @@ import { MasterRoleRepository } from "./masterRole.repository";
 import { InvoiceRepository } from "./invoice.repository";
 import { InvoiceItemRepository } from "./invoiceItem.repository";
 import { InvoiceTransactionRepository } from "./invoiceTransaction.repository";
+import { SubscriptionRepository } from "./subscription.repository";
 
 export {
     BackendUserRepository,
@@ -19,5 +20,6 @@ export {
     MasterRoleRepository,
     InvoiceRepository,
     InvoiceItemRepository,
-    InvoiceTransactionRepository
+    InvoiceTransactionRepository,
+    SubscriptionRepository
 }

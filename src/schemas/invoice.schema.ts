@@ -12,7 +12,7 @@ export class Invoice extends BaseSchema {
   @Prop({ required: true })
   invoiceId: number;
 
-  @Prop()
+  @Prop(({ type: Types.ObjectId, ref: 'Subscription', required: true }))
   subscriptionId?: number;
 
   @Prop()

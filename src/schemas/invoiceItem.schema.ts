@@ -30,7 +30,7 @@ export class InvoiceItem extends BaseSchema {
   @Prop()
   servicePlanId?: number;
 
-  @Prop()
+  @Prop(({ type: Types.ObjectId, ref: 'Subscription', required: true }))
   subscriptionId?: number;
 }
 

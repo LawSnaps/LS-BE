@@ -8,6 +8,7 @@ import { MasterRoleModel } from "./masterRole.model";
 import { InvoiceModel } from "./invoice.model";
 import { InvoiceItemModel } from "./invoiceItem.model";
 import { InvoiceTransactionModel } from "./invoiceTransaction.model";
+import { SubscriptionModel } from "./subscription.model";
 
 export {
     EmployeeModel,
@@ -19,5 +20,6 @@ export {
     MasterRoleModel,
     InvoiceModel,
     InvoiceItemModel,
-    InvoiceTransactionModel
+    InvoiceTransactionModel,
+    SubscriptionModel
 }

@@ -1,3 +1,4 @@
+import { Types } from "mongoose";
 import { BaseDTO } from "./base.dto";
 
 export class CreateInvoiceItemDto extends BaseDTO {
@@ -9,5 +10,5 @@ export class CreateInvoiceItemDto extends BaseDTO {
   finalAmount: number;
   invoiceId: number;
   servicePlanId?: number;
-  subscriptionId?: number;
+  subscriptionId?: Types.ObjectId;
 }

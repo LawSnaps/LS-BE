@@ -11,6 +11,7 @@ import { MasterRoleModule } from './masterRole.module';
 import { InvoiceModule } from './invoice.module';
 import { InvoiceItemModule } from './invoiceItem.module';
 import { InvoiceTransactionModule } from './invoiceTransaction.module';
+import { SubscriptionModule } from './subscription.module';
 
 export {
     EmployeeModule,
@@ -22,5 +23,6 @@ export {
     MasterRoleModule,
     InvoiceModule,
     InvoiceItemModule,
-    InvoiceTransactionModule
+    InvoiceTransactionModule,
+    SubscriptionModule
 }

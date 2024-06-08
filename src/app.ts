@@ -10,7 +10,9 @@ import { BackendPermissionModule,
     MasterRoleModule, 
     InvoiceModule,
     InvoiceItemModule,
-    InvoiceTransactionModule} from './modules';
+    InvoiceTransactionModule,
+    SubscriptionModule
+  } from './modules';
 @Module({
   imports: [
     BoatModule,
@@ -25,6 +27,7 @@ import { BackendPermissionModule,
     InvoiceModule,
     InvoiceItemModule,
     InvoiceTransactionModule,
+    SubscriptionModule,
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/lawsnaps')
   ]
 })

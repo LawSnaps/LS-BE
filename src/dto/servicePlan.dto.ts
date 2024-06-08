@@ -1,6 +1,7 @@
 import { IsString, IsOptional, IsNumber, IsBoolean, IsDecimal, MaxLength } from 'class-validator';
+import { BaseDTO } from './base.dto';
 
-export class CreateServicePlanDto {
+export class CreateServicePlanDto extends BaseDTO {
     @IsString()
     @MaxLength(50)
     name: string;
@@ -61,7 +62,7 @@ export class CreateServicePlanDto {
     taxType?: string;
 }
 
-export class UpdateServicePlanDto {
+export class UpdateServicePlanDto extends BaseDTO {
     @IsString()
     @IsOptional()
     @MaxLength(50)

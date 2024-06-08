@@ -167,7 +167,7 @@ export class CreateCompanyDto extends BaseDTO {
     providerName?: string;
 }
 
-export class UpdateCompanyDto {
+export class UpdateCompanyDto extends BaseDTO {
     @IsString()
     @IsOptional()
     @MaxLength(255)

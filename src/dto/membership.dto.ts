@@ -1,6 +1,7 @@
 import { IsString, IsOptional, IsNumber, IsBoolean, IsDecimal, MaxLength } from 'class-validator';
+import { BaseDTO } from './base.dto';
 
-export class CreateMembershipDto {
+export class CreateMembershipDto extends BaseDTO {
     @IsString()
     @IsOptional()
     @MaxLength(100)
@@ -84,7 +85,7 @@ export class CreateMembershipDto {
     yearlyCredit?: number;
 }
 
-export class UpdateMembershipDto {
+export class UpdateMembershipDto extends BaseDTO {
     @IsString()
     @IsOptional()
     @MaxLength(100)

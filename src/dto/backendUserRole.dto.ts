@@ -1,6 +1,7 @@
+import { Types } from "mongoose";
 import { BaseDTO } from "./base.dto";
 
 export class CreateBackendUserRoleDto extends BaseDTO {
-  backendRoleId: number;
-  backendUserId: number;
+  backendRoleId: Types.ObjectId;
+  backendUserId: Types.ObjectId;
 }

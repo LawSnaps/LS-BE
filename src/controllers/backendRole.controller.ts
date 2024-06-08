@@ -2,7 +2,7 @@ import { BackendRoleService } from "@app/services/backendRole.service";
 import { Controller, Get, Post, Req, Res } from "@nestjs/common";
 import { Request, Response } from "express";
 
-@Controller('backendRoles')
+@Controller('backendRole')
 export class BackendRoleController {
   constructor(private service: BackendRoleService) {
   }

@@ -9,6 +9,12 @@ import { CompanyModel } from "./company.model";
 import { GlobalSettingsModel } from "./globalSettings.model";
 import { MembershipModel } from "./membership.models";
 import { ServicePlanModel } from "./servicePlan.models";
+import { MasterRoleModel } from "./masterRole.model";
+import { InvoiceModel } from "./invoice.model";
+import { InvoiceItemModel } from "./invoiceItem.model";
+import { InvoiceTransactionModel } from "./invoiceTransaction.model";
+import { SubscriptionModel } from "./subscription.model";
+import { PermissionModel } from "./permission.model";
 
 export {
     EmployeeModel,
@@ -21,5 +27,11 @@ export {
     CompanyModel,
     GlobalSettingsModel,
     MembershipModel,
-    ServicePlanModel
+    ServicePlanModel,
+    MasterRoleModel,
+    InvoiceModel,
+    InvoiceItemModel,
+    InvoiceTransactionModel,
+    SubscriptionModel,
+    PermissionModel
 }

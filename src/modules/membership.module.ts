@@ -3,7 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { MembershipController } from '@app/controllers/membership.controller'
 import { MembershipService } from '@app/services/membership.service'
 import { Membership, MembershipSchema } from '@app/schemas/membership.schema';
-import { MembershipRepository } from '@app/repositories/membership.repository';
+import { MembershipRepository } from '@app/repositories';
 
 
 @Module({

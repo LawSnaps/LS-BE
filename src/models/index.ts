@@ -4,6 +4,11 @@ import { BackendPermissionModel } from "./backendPermission.model";
 import { BackendUserModel } from "./backendUser.model";
 import { BackendUserPermissionModel } from "./backendUserPermission.model";
 import { BackendUserRoleModel } from "./backendUserRole.model";
+import { BackendRolePermissionModel } from './backendRolePermission.model';
+import { CompanyModel } from "./company.model";
+import { GlobalSettingsModel } from "./globalSettings.model";
+import { MembershipModel } from "./membership.models";
+import { ServicePlanModel } from "./servicePlan.models";
 
 export {
     EmployeeModel,
@@ -11,5 +16,10 @@ export {
     BackendPermissionModel,
     BackendUserModel,
     BackendUserPermissionModel,
-    BackendUserRoleModel
+    BackendUserRoleModel,
+    BackendRolePermissionModel,
+    CompanyModel,
+    GlobalSettingsModel,
+    MembershipModel,
+    ServicePlanModel
 }

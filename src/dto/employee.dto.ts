@@ -5,12 +5,12 @@ export class CreateEmployeeDto extends BaseDTO {
     companyId: Types.ObjectId;
     shiftId?: Types.ObjectId;
     employeeCode: string;
-    managerId: number;
+    managerId: Types.ObjectId;
     firstName: string;
     lastName: string;
     displayName: string;
-    departmentId: number;
-    designationId: number;
+    departmentId: Types.ObjectId;
+    designationId: Types.ObjectId;
     dateOfJoining?: Date;
     workPhone?: string;
     mobile?: string;

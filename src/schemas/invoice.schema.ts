@@ -7,13 +7,13 @@ export type InvoiceSchemaDocument =  HydratedDocument<Invoice>;
 @Schema()
 export class Invoice extends BaseSchema {
   @Prop({ type: Types.ObjectId, ref: 'Company', required: true })
-  companyId: number;
+  companyId: Types.ObjectId;
 
-  @Prop({ required: true })
-  invoiceId: number;
+  @Prop({ type: Types.ObjectId, ref: 'Invoice', required: true })
+  invoiceId: Types.ObjectId;
 
   @Prop(({ type: Types.ObjectId, ref: 'Subscription', required: true }))
-  subscriptionId?: number;
+  subscriptionId?: Types.ObjectId;
 
   @Prop()
   subscriptionCreated?: number;

@@ -1,7 +1,8 @@
+import { Types } from "mongoose";
 import { BaseDTO } from "./base.dto";
 
 export class CreateInvoiceTransactionDto extends BaseDTO {
-    invoiceId: number;
+    invoiceId: Types.ObjectId;
     transactionNumber?: string;
     amount?: number;
     transactionDate?: Date;

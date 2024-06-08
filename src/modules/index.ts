@@ -12,6 +12,7 @@ import { InvoiceModule } from './invoice.module';
 import { InvoiceItemModule } from './invoiceItem.module';
 import { InvoiceTransactionModule } from './invoiceTransaction.module';
 import { SubscriptionModule } from './subscription.module';
+import { PermissionModule } from './permission.module';
 
 export {
     EmployeeModule,
@@ -24,5 +25,6 @@ export {
     InvoiceModule,
     InvoiceItemModule,
     InvoiceTransactionModule,
-    SubscriptionModule
+    SubscriptionModule,
+    PermissionModule
 }

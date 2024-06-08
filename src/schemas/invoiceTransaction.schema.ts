@@ -6,8 +6,8 @@ export type InvoiceTransactionSchemaDocument =  HydratedDocument<InvoiceTransact
 
 @Schema()
 export class InvoiceTransaction extends BaseSchema {
-  @Prop({ required: true })
-  invoiceId: number;
+  @Prop({ type: Types.ObjectId, ref: 'Invoice', required: true })
+  invoiceId: Types.ObjectId;
 
   @Prop({ type: String, maxlength: 50 })
   transactionNumber?: string;

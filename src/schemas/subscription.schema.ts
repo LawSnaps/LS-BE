@@ -7,7 +7,7 @@ export type SubscriptionSchemaDocument =  HydratedDocument<Subscription>;
 @Schema()
 export class Subscription extends BaseSchema {
   @Prop({ type: Types.ObjectId, ref: 'Company', required: true })
-  companyId: number;
+  companyId: Types.ObjectId;
 
   @Prop({ type: String })
   description?: string;
@@ -39,8 +39,8 @@ export class Subscription extends BaseSchema {
   @Prop({ type: String, maxlength: 100 })
   type?: string;
 
-  @Prop({ type: Number })
-  servicePlanId?: number;
+  @Prop({ type: Types.ObjectId, ref: 'ServicePlan', required: true })
+  servicePlanId?: Types.ObjectId;
 
   @Prop({ type: Number })
   partnerId?: number;

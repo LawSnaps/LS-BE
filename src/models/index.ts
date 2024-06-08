@@ -9,6 +9,7 @@ import { InvoiceModel } from "./invoice.model";
 import { InvoiceItemModel } from "./invoiceItem.model";
 import { InvoiceTransactionModel } from "./invoiceTransaction.model";
 import { SubscriptionModel } from "./subscription.model";
+import { PermissionModel } from "./permission.model";
 
 export {
     EmployeeModel,
@@ -21,5 +22,6 @@ export {
     InvoiceModel,
     InvoiceItemModel,
     InvoiceTransactionModel,
-    SubscriptionModel
+    SubscriptionModel,
+    PermissionModel
 }

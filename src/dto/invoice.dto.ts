@@ -3,7 +3,7 @@ import { BaseDTO } from "./base.dto";
 
 export class CreateInvoiceDto extends BaseDTO {
     companyId: Types.ObjectId;
-    invoiceId: number;
+    invoiceId: Types.ObjectId;
     subscriptionId?: Types.ObjectId;
     subscriptionCreated?: number;
     amount: number;

@@ -24,14 +24,14 @@ export class InvoiceItem extends BaseSchema {
   @Prop({ required: true, type: Number })
   finalAmount: number;
 
-  @Prop({ required: true })
-  invoiceId: number;
+  @Prop({ type: Types.ObjectId, ref: 'Invoice', required: true })
+  invoiceId: Types.ObjectId;
 
-  @Prop()
-  servicePlanId?: number;
+  @Prop({ type: Types.ObjectId, ref: 'ServicePlan', required: true })
+  servicePlanId?: Types.ObjectId;
 
   @Prop(({ type: Types.ObjectId, ref: 'Subscription', required: true }))
-  subscriptionId?: number;
+  subscriptionId?: Types.ObjectId;
 }
 
 export const InvoiceItemSchema = SchemaFactory.createForClass(InvoiceItem);

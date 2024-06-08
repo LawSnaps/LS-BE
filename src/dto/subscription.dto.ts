@@ -13,6 +13,6 @@ export class CreateSubscriptionDto extends BaseDTO {
   endDate: Date;
   status: number;
   type?: string;
-  servicePlanId?: number;
+  servicePlanId?: Types.ObjectId;
   partnerId?: number;
 }

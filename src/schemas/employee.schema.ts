@@ -7,16 +7,16 @@ export type EmployeeSchemaDocument =  HydratedDocument<Employees>;
 @Schema()
 export class Employees extends BaseSchema {
     @Prop({type: Types.ObjectId, ref: 'Company', required: true })
-    public companyId!: number;
+    public companyId!: Types.ObjectId;
   
     @Prop({type: Types.ObjectId, ref: 'Shift'})
-    public shiftId?: number;
+    public shiftId?: Types.ObjectId;
   
     @Prop({ required: true })
     public employeeCode!: string;
   
-    @Prop({ required: true })
-    public managerId!: number;
+    @Prop({type: Types.ObjectId, ref: 'Manager', required: true })
+    public managerId!: Types.ObjectId;
   
     @Prop({ required: true })
     public firstName!: string;
@@ -27,10 +27,10 @@ export class Employees extends BaseSchema {
     @Prop({ required: true })
     public displayName!: string;
   
-    @Prop({ required: true })
+    @Prop({type: Types.ObjectId, ref: 'Department', required: true })
     public departmentId!: number;
   
-    @Prop({ required: true })
+    @Prop({type: Types.ObjectId, ref: 'Designation', required: true })
     public designationId!: number;
   
     @Prop()

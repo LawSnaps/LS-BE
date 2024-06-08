@@ -8,7 +8,7 @@ export class CreateInvoiceItemDto extends BaseDTO {
   discount?: number;
   tax?: number;
   finalAmount: number;
-  invoiceId: number;
+  invoiceId: Types.ObjectId;
   servicePlanId?: number;
   subscriptionId?: Types.ObjectId;
 }

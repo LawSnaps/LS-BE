@@ -1,11 +1,10 @@
-import { MasterRoleService } from "@app/services/masterRole.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { MasterRoleService } from '@app/services/masterRole.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('masterRole')
 export class MasterRoleController {
-  constructor(private service: MasterRoleService) {
-  }
+  constructor(private service: MasterRoleService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,11 @@ export class MasterRoleController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body, ip } = req;
-    const createdMasterRole = await this.service.createMasterRole(body)
+    const createdMasterRole = await this.service.createMasterRole(body);
     if (createdMasterRole) {
-      return res.status(200).send("MasterRole Created")
+      return res.status(200).send('MasterRole Created');
     }
   }
 }

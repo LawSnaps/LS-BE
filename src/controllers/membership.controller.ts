@@ -1,11 +1,10 @@
-import { MembershipService } from "@app/services/membership.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { MembershipService } from '@app/services/membership.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('membership')
 export class MembershipController {
-  constructor(private service: MembershipService) {
-  }
+  constructor(private service: MembershipService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,11 @@ export class MembershipController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body, ip } = req;
-    const createdMembership = await this.service.createMembership(body, ip)
+    const createdMembership = await this.service.createMembership(body, ip);
     if (createdMembership) {
-      return res.status(200).send("Membership Created")
+      return res.status(200).send('Membership Created');
     }
   }
 }

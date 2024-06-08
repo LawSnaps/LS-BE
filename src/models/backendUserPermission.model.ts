@@ -1,3 +1,3 @@
-export class  BackendUserPermissionModel {
-    static collectionName = "backenduserpermissions";
+export class BackendUserPermissionModel {
+  static collectionName = 'backenduserpermissions';
 }

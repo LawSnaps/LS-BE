@@ -1,5 +1,3 @@
-
-
 export class BackendUserModel {
-    static collectionName = "backendUser"
+  static collectionName = 'backendUser';
 }

@@ -1,11 +1,10 @@
-import { BackendPermissionService } from "@app/services/backendPermission.service";
-import { Controller, Get, Post, Req, Res } from "@nestjs/common";
-import { Request, Response } from "express";
+import { BackendPermissionService } from '@app/services/backendPermission.service';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Request, Response } from 'express';
 
 @Controller('backendPermissions')
 export class BackendPermissionController {
-  constructor(private service: BackendPermissionService) {
-  }
+  constructor(private service: BackendPermissionService) {}
 
   @Get('/')
   async getProfile(
@@ -17,14 +16,14 @@ export class BackendPermissionController {
   }
 
   @Post('/')
-  async create(
-    @Req() req: Request,
-    @Res() res: Response
-  ): Promise<Response> {
+  async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
     const { body, ip } = req;
-    const createdBackendPermission = await this.service.createBackendPermission(body, ip)
+    const createdBackendPermission = await this.service.createBackendPermission(
+      body,
+      ip,
+    );
     if (createdBackendPermission) {
-      return res.status(200).send("BackendPermission Created")
+      return res.status(200).send('BackendPermission Created');
     }
   }
 }

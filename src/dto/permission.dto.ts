@@ -1,6 +1,6 @@
-import { BaseDTO } from "./base.dto";
+import { BaseDTO } from './base.dto';
 
 export class CreatePermissionDto extends BaseDTO {
-    name?: string;
-    description?: string;
+  name?: string;
+  description?: string;
 }

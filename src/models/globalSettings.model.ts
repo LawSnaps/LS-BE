@@ -1,5 +1,3 @@
-
-
 export class GlobalSettingsModel {
-    static collectionName = "globalSettings"
+  static collectionName = 'globalSettings';
 }

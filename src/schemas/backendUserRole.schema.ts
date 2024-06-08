@@ -1,7 +1,6 @@
-import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
-import { BaseSchema } from "./base.schema";
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { BaseSchema } from './base.schema';
 import { HydratedDocument, Types } from 'mongoose';
-
 
 export type BackendUserRoleSchemaDocument = HydratedDocument<BackendUserRole>;
 
@@ -14,4 +13,5 @@ export class BackendUserRole extends BaseSchema {
   backendUserId: number;
 }
 
-export const BackendUserRoleSchema = SchemaFactory.createForClass(BackendUserRole);
+export const BackendUserRoleSchema =
+  SchemaFactory.createForClass(BackendUserRole);

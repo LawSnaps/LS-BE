@@ -1,5 +1,3 @@
-
-
 export class RolesModel {
-    static collectionName = "roles"
+  static collectionName = 'roles';
 }

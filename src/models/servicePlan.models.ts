@@ -1,5 +1,3 @@
-
-
 export class ServicePlanModel {
-    static collectionName = "servicePlan"
+  static collectionName = 'servicePlan';
 }

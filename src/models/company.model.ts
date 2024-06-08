@@ -1,5 +1,3 @@
-
-
 export class CompanyModel {
-    static collectionName = "company"
+  static collectionName = 'company';
 }

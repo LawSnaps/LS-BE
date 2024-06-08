@@ -15,28 +15,27 @@ import { InvoiceTransactionModule } from './invoiceTransaction.module';
 import { SubscriptionModule } from './subscription.module';
 import { PermissionModule } from './permission.module';
 
-import { CompanyModule } from "./company.module";
-import { GlobalSettingsModule } from "./globalSettings.module";
-import { MembershipModule } from "./membership.module";
-import { ServicePlanModule } from "./servicePlan.module";
-
+import { CompanyModule } from './company.module';
+import { GlobalSettingsModule } from './globalSettings.module';
+import { MembershipModule } from './membership.module';
+import { ServicePlanModule } from './servicePlan.module';
 
 export {
-    EmployeeModule,
-    BackendPermissionModule,
-    BackendRoleModule,
-    BackendUserModule,
-    BackendUserPermissionModule,
-    BackendUserRoleModule,
-    BackendRolePermissionModule,
-    CompanyModule,
-    GlobalSettingsModule,
-    MembershipModule,
-    ServicePlanModule,
-    MasterRoleModule,
-    InvoiceModule,
-    InvoiceItemModule,
-    InvoiceTransactionModule,
-    SubscriptionModule,
-    PermissionModule
-}
+  EmployeeModule,
+  BackendPermissionModule,
+  BackendRoleModule,
+  BackendUserModule,
+  BackendUserPermissionModule,
+  BackendUserRoleModule,
+  BackendRolePermissionModule,
+  CompanyModule,
+  GlobalSettingsModule,
+  MembershipModule,
+  ServicePlanModule,
+  MasterRoleModule,
+  InvoiceModule,
+  InvoiceItemModule,
+  InvoiceTransactionModule,
+  SubscriptionModule,
+  PermissionModule,
+};

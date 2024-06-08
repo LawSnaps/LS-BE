@@ -1,3 +1,3 @@
 export class EmployeeModel {
-    static collectionName = "employees"
+  static collectionName = 'employees';
 }

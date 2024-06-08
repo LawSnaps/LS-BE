@@ -1,5 +1,3 @@
-
-
 export class BackendPermissionModel {
-    static collectionName = "backendPermission"
+  static collectionName = 'backendPermission';
 }

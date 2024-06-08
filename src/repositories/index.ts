@@ -4,6 +4,11 @@ import { BackendUserPermissionRepository } from "@app/repositories/backendUserPe
 import { BackendRoleRepository } from "@app/repositories/backendRole.repository";
 import { BackendUserRoleRepository } from "@app/repositories/backendUserRole.repository";
 import { EmployeeRepository } from "@app/repositories/employee.repository";
+import { BackendRolePermissionRepository } from "@app/repositories/backendRolePermission.repository";
+import { CompanyRepository } from "@app/repositories/company.repository";
+import { GlobalSettingsRepository } from "@app/repositories/globalSettings.repository";
+import { MembershipRepository} from "@app/repositories/membership.repository";
+import { ServicePlanRepository} from "@app/repositories/servicePlan.repository";
 import { MasterRoleRepository } from "./masterRole.repository";
 import { InvoiceRepository } from "./invoice.repository";
 import { InvoiceItemRepository } from "./invoiceItem.repository";
@@ -18,6 +23,11 @@ export {
     BackendUserPermissionRepository,
     BackendUserRoleRepository,
     EmployeeRepository,
+    BackendRolePermissionRepository,
+    CompanyRepository,
+    GlobalSettingsRepository,
+    MembershipRepository,
+    ServicePlanRepository,
     MasterRoleRepository,
     InvoiceRepository,
     InvoiceItemRepository,

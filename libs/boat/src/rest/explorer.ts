@@ -13,7 +13,7 @@ export class HttpExplorer {
     private readonly config: ConfigService,
     private readonly discovery: DiscoveryService,
     private readonly metadataScanner: MetadataScanner,
-  ) {}
+  ) { }
 
   onModuleInit() {
     HttpMetadata.setBaseUrl(this.config.get('app.url'));
@@ -37,7 +37,7 @@ export class HttpExplorer {
           this.lookupListeners(
             instance,
             key,
-            Reflect.getMetadata(PATH_METADATA, w.metatype),
+            Reflect.getMetadata(PATH_METADATA, metatype),
           ),
       );
     });

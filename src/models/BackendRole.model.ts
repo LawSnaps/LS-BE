@@ -1,5 +1,3 @@
-
-
 export class BackendRoleModel {
-    static collectionName = "backendRole"
+  static collectionName = 'backendRole';
 }

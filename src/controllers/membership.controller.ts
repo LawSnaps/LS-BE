@@ -1,4 +1,4 @@
-import { MembershipService } from '@app/services/membership.service';
+import { MembershipService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

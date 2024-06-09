@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { InvoiceItemController } from '@app/controllers/invoiceItem.controller';
-import { InvoiceItemService } from '@app/services/invoiceItem.service';
+import { InvoiceItemService } from '@app/services';
 import {
   InvoiceItem,
   InvoiceItemSchema,
 } from '@app/schemas/invoiceItem.schema';
-import { InvoiceItemRepository } from '@app/repositories/invoiceItem.repository';
+import { InvoiceItemRepository } from '@app/repositories';
 
 @Module({
   imports: [

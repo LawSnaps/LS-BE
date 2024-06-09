@@ -1,4 +1,4 @@
-import { BackendRoleService } from '@app/services/backendRole.service';
+import { BackendRoleService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

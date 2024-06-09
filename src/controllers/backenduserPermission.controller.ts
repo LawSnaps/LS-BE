@@ -1,8 +1,8 @@
-import { BackendUserPermissionService } from '@app/services/backendUserPermission.service';
+import { BackendUserPermissionService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
-@Controller('backenduserPermission')
+@Controller('backendUserPermission')
 export class BackendUserPermissionController {
   constructor(private service: BackendUserPermissionService) {}
 

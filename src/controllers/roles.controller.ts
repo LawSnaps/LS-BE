@@ -1,4 +1,4 @@
-import { RolesService } from '@app/services/roles.service';
+import { RolesService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

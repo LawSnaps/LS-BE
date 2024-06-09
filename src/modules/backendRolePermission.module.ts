@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { BackendRolePermissionController } from '@app/controllers/backendrolePermission.controller';
-import { BackendRolePermissionService } from '@app/services/backendRolepermission.service';
+import { BackendRolePermissionController } from '@app/controllers/backendRolePermission.controller';
 import {
   BackendRolePermission,
   BackendRolePermissionSchema,
 } from '@app/schemas/backendRolePermission.schema';
-import { BackendRolePermissionRepository } from '@app/repositories/backendRolePermission.repository';
+import { BackendRolePermissionRepository } from '@app/repositories';
+import { BackendRolePermissionService } from '@app/services';
 
 @Module({
   imports: [
@@ -18,7 +18,7 @@ import { BackendRolePermissionRepository } from '@app/repositories/backendRolePe
   providers: [
     BackendRolePermissionService,
     {
-      provide: 'backendrolePermissionModule',
+      provide: 'backendRolePermissionModule',
       useClass: BackendRolePermissionRepository,
     },
   ],

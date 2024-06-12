@@ -1,7 +1,7 @@
 import { BackendPermissionService } from '@app/services/backendPermission.service';
 import { BackendRoleService } from '@app/services/backendRole.service';
 import { BackendUserService } from '@app/services/backendUser.service';
-import { BackendUserPermissionService } from '@app/services/backendUserPermission.service';
+import { BackendUserPermissionService } from '@app/services/backendUserpermission.service';
 import { BackendUserRoleService } from '@app/services/backendUserRole.service';
 import { CompanyService } from '@app/services/company.service';
 import { EmployeeService } from '@app/services/employee.service';

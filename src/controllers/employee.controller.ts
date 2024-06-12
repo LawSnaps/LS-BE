@@ -1,4 +1,4 @@
-import { EmployeeService } from '@app/services/employee.service';
+import { EmployeeService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

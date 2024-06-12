@@ -32,7 +32,10 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "spell": "yarn spell:src && yarn spell:test",
+    "spell:src": "cspell lint --config cspell.json src/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true",
+    "spell:test": "cspell lint --config cspell.json test/**/*.ts --color --gitignore --no-must-find-files --no-summary --no-progress || true"
   },
   "dependencies": {
     "@nestjs/common": "^10.1.0",
@@ -68,7 +71,8 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^9.4.0",
+    "cspell": "^8.8.4",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^5.1.3",

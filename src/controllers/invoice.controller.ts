@@ -1,4 +1,4 @@
-import { InvoiceService } from '@app/services/invoice.service';
+import { InvoiceService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

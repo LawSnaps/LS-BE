@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BackendPermissionController } from '@app/controllers/backendPermission.controller';
-import { BackendPermissionService } from '@app/services/backendPermission.service';
+import { BackendPermissionService } from '@app/services';
 import {
   BackendPermission,
   BackendPermissionSchema,
 } from '@app/schemas/backendPermission.schema';
-import { BackendPermissionRepository } from '@app/repositories/backendPermission.repository';
+import { BackendPermissionRepository } from '@app/repositories';
 
 @Module({
   imports: [
@@ -23,4 +23,4 @@ import { BackendPermissionRepository } from '@app/repositories/backendPermission
     },
   ],
 })
-export class BackendPermissionModule {}
+export class BackendPermissionModule { }

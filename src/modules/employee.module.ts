@@ -4,6 +4,7 @@ import { EmployeeController } from '@app/controllers/employee.controller';
 import { EmployeeService } from '@app/services/employee.service';
 import { Employees, EmployeeSchema } from '@app/schemas/employee.schema';
 import { EmployeeRepository } from '@app/repositories/employee.repository';
+import { CustomLogger } from '@libs/boat/logger/customLogger';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { EmployeeRepository } from '@app/repositories/employee.repository';
   ],
   controllers: [EmployeeController],
   providers: [
+    CustomLogger,
     EmployeeService,
     { provide: 'employeeModule', useClass: EmployeeRepository },
   ],

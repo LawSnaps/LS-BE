@@ -1,10 +1,11 @@
 import { Inject, Injectable } from '@nestjs/common';
-
+import { CustomLogger } from '@libs/boat/logger/customLogger';
 @Injectable()
 export class EmployeeService {
-  constructor(@Inject('employeeModule') private users) {}
+  constructor(@Inject('employeeModule') private users, private readonly customLogger: CustomLogger) {}
 
   async getAllEmployee(): Promise<Record<string, any>> {
+    this.customLogger.log('This is an info message');
     return this.users.findAll();
   }
 

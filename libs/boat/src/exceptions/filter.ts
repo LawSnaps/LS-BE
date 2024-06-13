@@ -7,9 +7,14 @@ import {
 import { BaseExceptionFilter } from '@nestjs/core';
 import { ValidationFailed, InvalidCredentials, GenericException } from '.';
 import { Unauthorized } from './unauthorized';
+import { CustomLogger } from '../logger/customLogger';
 
 @Catch()
 export class ExceptionFilter extends BaseExceptionFilter {
+  constructor(private readonly logger: CustomLogger) {
+    super();
+  }
+
   doNotReport(): Array<any> {
     return [
       NotFoundException,
@@ -20,7 +25,6 @@ export class ExceptionFilter extends BaseExceptionFilter {
       UnauthorizedException,
     ];
   }
-
   catch(exception: any, host: ArgumentsHost) {
     console.error('ERRRR ==> ', exception);
     const ctx = host.switchToHttp();
@@ -42,6 +46,9 @@ export class ExceptionFilter extends BaseExceptionFilter {
     const status = exception.status ? exception.status : 500;
     message = exception.status ? message : 'Internal Server Error';
 
+    const stack = exception.stack || '';
+    this.logger.error(`${message} -> ${stack}`);
+    
     return response.status(status).json({
       success: false,
       code: status,

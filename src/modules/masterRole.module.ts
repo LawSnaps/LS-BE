@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MasterRoleController } from '@app/controllers/masterRole.controller';
-import { MasterRoleService } from '@app/services/masterRole.service';
+import { MasterRoleService } from '@app/services';
 import { MasterRole, MasterRoleSchema } from '@app/schemas/masterRole.schema';
-import { MasterRoleRepository } from '@app/repositories/masterRole.repository';
+import { MasterRoleRepository } from '@app/repositories';
 
 @Module({
   imports: [

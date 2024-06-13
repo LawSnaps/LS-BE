@@ -9,12 +9,13 @@ import { CompanyRepository } from '@app/repositories/company.repository';
 import { GlobalSettingsRepository } from '@app/repositories/globalSettings.repository';
 import { MembershipRepository } from '@app/repositories/membership.repository';
 import { ServicePlanRepository } from '@app/repositories/servicePlan.repository';
-import { MasterRoleRepository } from './masterRole.repository';
-import { InvoiceRepository } from './invoice.repository';
-import { InvoiceItemRepository } from './invoiceItem.repository';
-import { InvoiceTransactionRepository } from './invoiceTransaction.repository';
-import { SubscriptionRepository } from './subscription.repository';
-import { PermissionRepository } from './permission.repository';
+import { MasterRoleRepository } from '@app/repositories/masterRole.repository';
+import { InvoiceRepository } from '@app/repositories/invoice.repository';
+import { InvoiceItemRepository } from '@app/repositories/invoiceItem.repository';
+import { InvoiceTransactionRepository } from '@app/repositories/invoiceTransaction.repository';
+import { SubscriptionRepository } from '@app/repositories/subscription.repository';
+import { PermissionRepository } from '@app/repositories/permission.repository';
+import { RolesRepository } from '@app/repositories/roles.repository';
 
 export {
   BackendUserRepository,
@@ -34,4 +35,5 @@ export {
   InvoiceTransactionRepository,
   SubscriptionRepository,
   PermissionRepository,
+  RolesRepository
 };

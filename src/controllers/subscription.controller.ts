@@ -1,4 +1,4 @@
-import { SubscriptionService } from '@app/services/subscription.service';
+import { SubscriptionService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

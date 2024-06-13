@@ -3,23 +3,23 @@ import { Inject, Injectable } from '@nestjs/common';
 @Injectable()
 export class BackendRolePermissionService {
   constructor(
-    @Inject('backedRolePermissionModule') private backendrolePermission,
+    @Inject('backendRolePermissionModule') private backendRolePermission,
   ) {}
 
   async getAllBackendRolePermission(): Promise<Record<string, any>> {
-    return this.backendrolePermission.findAll();
+    return this.backendRolePermission.findAll();
   }
 
   async createBackendRolePermission(
-    backendrolePermissionDetails,
+    backendRolePermissionDetails,
   ): Promise<Record<string, any>> {
     const payload = {
       createdAt: new Date(),
       createdBy: 'system',
       updatedAt: new Date(),
       updatedBy: 'system',
-      ...backendrolePermissionDetails,
+      ...backendRolePermissionDetails,
     };
-    return this.backendrolePermission.create(payload);
+    return this.backendRolePermission.create(payload);
   }
 }

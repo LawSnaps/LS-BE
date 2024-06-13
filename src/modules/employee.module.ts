@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { EmployeeController } from '@app/controllers/employee.controller';
-import { EmployeeService } from '@app/services/employee.service';
+import { EmployeeService } from '@app/services';
 import { Employees, EmployeeSchema } from '@app/schemas/employee.schema';
-import { EmployeeRepository } from '@app/repositories/employee.repository';
 import { CustomLogger } from '@libs/boat/logger/customLogger';
+import { EmployeeRepository } from '@app/repositories';
 
 @Module({
   imports: [

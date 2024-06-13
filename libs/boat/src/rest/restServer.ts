@@ -1,4 +1,4 @@
-import { HttpAdapterHost, NestFactory } from '@nestjs/core';
+import { NestFactory } from '@nestjs/core';
 import { useContainer } from 'class-validator';
 import { ServerOptions } from './interfaces';
 import { ConfigService } from '@nestjs/config';

@@ -1,4 +1,4 @@
-import { InvoiceItemService } from '@app/services/invoiceItem.service';
+import { InvoiceItemService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
@@ -17,7 +17,7 @@ export class InvoiceItemController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdInvoiceItem = await this.service.createInvoiceItem(body);
     if (createdInvoiceItem) {
       return res.status(200).send('InvoiceItem Created');

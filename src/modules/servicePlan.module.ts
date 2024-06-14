@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ServicePlanController } from '@app/controllers/servicePlan.controller';
-import { ServicePlanService } from '@app/services/servicePlan.service';
+import { ServicePlanService } from '@app/services';
 import {
   ServicePlan,
   ServicePlanSchema,

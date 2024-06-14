@@ -1,4 +1,4 @@
-import { ServicePlanService } from '@app/services/servicePlan.service';
+import { ServicePlanService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

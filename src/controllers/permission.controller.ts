@@ -1,4 +1,4 @@
-import { PermissionService } from '@app/services/permission.service';
+import { PermissionService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
@@ -17,7 +17,7 @@ export class PermissionController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdPermission = await this.service.createPermission(body);
     if (createdPermission) {
       return res.status(200).send('Permission Created');

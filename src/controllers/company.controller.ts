@@ -1,4 +1,4 @@
-import { CompanyService } from '@app/services/company.service';
+import { CompanyService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 

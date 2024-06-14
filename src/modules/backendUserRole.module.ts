@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BackendUserRoleController } from '@app/controllers/backendUserRole.controller';
-import { BackendUserRoleService } from '@app/services/backendUserRole.service';
+import { BackendUserRoleService } from '@app/services';
 import {
   BackendUserRole,
   BackendUserRoleSchema,
 } from '@app/schemas/backendUserRole.schema';
-import { BackendUserRoleRepository } from '@app/repositories/backendUserRole.repository';
+import { BackendUserRoleRepository } from '@app/repositories';
 
 @Module({
   imports: [

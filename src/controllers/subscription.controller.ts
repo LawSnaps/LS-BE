@@ -1,4 +1,4 @@
-import { SubscriptionService } from '@app/services/subscription.service';
+import { SubscriptionService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
@@ -17,7 +17,7 @@ export class SubscriptionController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdSubscription = await this.service.createSubscription(body);
     if (createdSubscription) {
       return res.status(200).send('Subscription Created');

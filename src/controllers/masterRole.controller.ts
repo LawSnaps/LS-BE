@@ -1,4 +1,4 @@
-import { MasterRoleService } from '@app/services/masterRole.service';
+import { MasterRoleService } from '@app/services';
 import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 
@@ -17,7 +17,7 @@ export class MasterRoleController {
 
   @Post('/')
   async create(@Req() req: Request, @Res() res: Response): Promise<Response> {
-    const { body, ip } = req;
+    const { body } = req;
     const createdMasterRole = await this.service.createMasterRole(body);
     if (createdMasterRole) {
       return res.status(200).send('MasterRole Created');

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { GlobalSettingsController } from '@app/controllers/globalSettings.controller';
-import { GlobalSettingsService } from '@app/services/globalSettings.service';
+import { GlobalSettingsService } from '@app/services';
 import {
   GlobalSettings,
   GlobalSettingsSchema,

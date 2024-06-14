@@ -15,6 +15,7 @@ import {
   SubscriptionModule,
   PermissionModule,
 } from './modules';
+import { CustomLogger } from '@libs/boat/logger/customLogger';
 @Module({
   imports: [
     BoatModule,
@@ -33,5 +34,8 @@ import {
     PermissionModule,
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/lawsnaps'),
   ],
+  providers:[
+    CustomLogger
+  ]
 })
 export class AppModule {}

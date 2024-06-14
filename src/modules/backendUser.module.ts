@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { BackendUserController } from '@app/controllers/backendUser.controller';
-import { BackendUserService } from '@app/services/backendUser.service';
+import { BackendUserService } from '@app/services';
 import {
   BackendUser,
   BackendUserSchema,

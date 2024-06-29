@@ -16,6 +16,8 @@ import {
   PermissionModule,
 } from './modules';
 import { CustomLogger } from '@libs/boat/logger/customLogger';
+import { DatabaseOptionsModule } from '@libs/boat/database/database.options.module';
+import { DatabaseOptionsService } from '@libs/boat/database/services/database.options.services';
 @Module({
   imports: [
     BoatModule,
@@ -32,7 +34,12 @@ import { CustomLogger } from '@libs/boat/logger/customLogger';
     InvoiceTransactionModule,
     SubscriptionModule,
     PermissionModule,
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/lawsnaps'),
+     MongooseModule.forRootAsync({
+      imports: [DatabaseOptionsModule],
+      useFactory: (databaseOptionsService: DatabaseOptionsService) =>
+         databaseOptionsService.createOptions(),
+      inject: [DatabaseOptionsService],
+    }),
   ],
   providers:[
     CustomLogger

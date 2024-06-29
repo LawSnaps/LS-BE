@@ -1,5 +1,4 @@
 import { registerAs } from '@nestjs/config';
-import { knexSnakeCaseMappers } from 'objection';
 
 export default registerAs(
   'db',
@@ -8,23 +7,12 @@ export default registerAs(
       isGlobal: true,
       default: 'pg',
       connections: {
-        pg: {
-          client: 'pg',
-          debug: !!+process.env.DB_DEBUG,
-          connection: {
             host: process.env.DB_HOST,
             port: process.env.DB_PORT,
-            database: process.env.DB_DATABASE,
+            name: process.env.DB_NAME,
             user: process.env.DB_USER,
             password: process.env.DB_PASSWORD,
-            charset: 'utf8',
-          },
-          useNullAsDefault: true,
-          migrations: {
-            directory: './database/migrations',
-          },
-          ...knexSnakeCaseMappers(),
-        },
+            cluster: process.env.DB_CLUSTER,
       },
     }),
 );

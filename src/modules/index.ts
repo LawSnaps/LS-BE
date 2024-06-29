@@ -2,7 +2,7 @@ import { EmployeeModule } from './employee.module';
 import { BackendPermissionModule } from './backendPermission.module';
 
 import { BackendRolePermissionModule } from './backendRolePermission.module';
-import { BackendRoleModule } from './backendRole.model';
+import { BackendRoleModule } from './backendRole.module';
 
 import { BackendUserModule } from './backendUser.module';
 
